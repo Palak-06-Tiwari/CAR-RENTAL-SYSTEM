@@ -10,7 +10,6 @@ public class RentalSystem {
         Car car1 = new Car("c001", "Toyota", "Camry", 60.0);
         Car car2 = new Car("c002", "Honda", "Shine", 50.0);
         Car car3 = new Car("c003", "Mahindra", "Thar", 150.0);
-
         rentalService.addCar(car1);
         rentalService.addCar(car2);
         rentalService.addCar(car3);

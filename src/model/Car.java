@@ -2,13 +2,13 @@ package model;
 
 public class Car {
 
-    private String carId;
+    private int carId;
     private String brand;
     private String model;
     private double rentPerDay;
     private boolean isAvailable;
 
-    public Car(String carId, String brand, String model, double rentPerDay) {
+    public Car(int carId, String brand, String model, double rentPerDay) {
         this.carId = carId;
         this.brand = brand;
         this.model = model;
@@ -16,7 +16,7 @@ public class Car {
         this.isAvailable = true;
     }
 
-    public String getCarId() {
+    public int getCarId() {
         return carId;
     }
 
