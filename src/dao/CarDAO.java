@@ -4,7 +4,6 @@ import java.sql.Statement;
 import java.sql.SQLException;
 import database.DatabaseConnection;
 import java.sql.PreparedStatement;
-import java.sql.PreparedStatement;
 import model.Car;
 
 public class CarDAO {
@@ -30,7 +29,7 @@ public class CarDAO {
         try(Connection con=DatabaseConnection.getConnection()) {
                 
             PreparedStatement pstmt = con.prepareStatement(sql);
-            
+
             pstmt.setInt(1, car.getCarId());
             pstmt.setString(2, car.getBrand());
             pstmt.setString(3, car.getModel());
@@ -49,6 +48,8 @@ public class CarDAO {
          CarDAO  carDAO=new CarDAO();
          carDAO.createCarTable(DatabaseConnection.getConnection());
            Car car = new Car(1, "Toyota", "Camry", 1500.0);
+           Car car2 = new Car(2, "mahindra", "punch", 2000.0);
           carDAO.insertCar(car);
+          carDAO.insertCar(car2);
     }
 }
